@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -33,27 +34,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/" className={`font-serif text-2xl font-bold ${isScrolled ? 'text-saffron-600' : 'text-white'}`}>
+            <HashLink smooth to="/#top" className={`font-serif text-2xl font-bold ${isScrolled ? 'text-saffron-600' : 'text-white'}`}>
               Visit Mahakal
-            </Link>
+            </HashLink>
           </div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            {navLinks.map((link) => {
-              const isHash = link.href.includes('#');
-              if (isHash && location.pathname === '/') {
-                return (
-                  <a key={link.name} href={link.href} className={`font-medium hover:text-saffron-500 transition-colors ${isScrolled ? 'text-stone-800' : 'text-stone-200'}`}>
-                    {link.name}
-                  </a>
-                );
-              }
-              return (
-                <Link key={link.name} to={link.href} className={`font-medium hover:text-saffron-500 transition-colors ${isScrolled ? 'text-stone-800' : 'text-stone-200'}`}>
-                  {link.name}
-                </Link>
-              );
-            })}
+            {navLinks.map((link) => (
+              <HashLink 
+                key={link.name} 
+                smooth 
+                to={link.href} 
+                className={`font-medium hover:text-saffron-500 transition-colors ${isScrolled ? 'text-stone-800' : 'text-stone-200'}`}
+              >
+                {link.name}
+              </HashLink>
+            ))}
             <a href="tel:+919617988929" className="flex items-center gap-2 bg-saffron-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-saffron-700 transition-colors shadow-lg shadow-saffron-600/30">
               <Phone size={18} />
               <span>+91 96179 88929</span>
@@ -75,21 +71,17 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex flex-col items-center space-y-4"
         >
-          {navLinks.map((link) => {
-            const isHash = link.href.includes('#');
-            if (isHash && location.pathname === '/') {
-              return (
-                <a key={link.name} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="text-stone-800 font-medium text-lg w-full text-center py-2 hover:bg-stone-50">
-                  {link.name}
-                </a>
-              );
-            }
-            return (
-              <Link key={link.name} to={link.href} className="text-stone-800 font-medium text-lg w-full text-center py-2 hover:bg-stone-50">
-                {link.name}
-              </Link>
-            );
-          })}
+          {navLinks.map((link) => (
+            <HashLink 
+              key={link.name} 
+              smooth 
+              to={link.href} 
+              onClick={() => setIsMobileMenuOpen(false)} 
+              className="text-stone-800 font-medium text-lg w-full text-center py-2 hover:bg-stone-50"
+            >
+              {link.name}
+            </HashLink>
+          ))}
           <a href="tel:+919617988929" className="flex items-center gap-2 bg-saffron-600 text-white px-6 py-3 rounded-full font-medium">
             <Phone size={18} />
             <span>+91 96179 88929</span>

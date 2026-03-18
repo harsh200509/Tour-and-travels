@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
           <div className="lg:col-span-2">
-            <Link to="/" className="font-serif text-3xl font-bold text-white mb-6 block">
+            <HashLink smooth to="/#top" className="font-serif text-3xl font-bold text-white mb-6 block">
               Visit Mahakal
-            </Link>
+            </HashLink>
             <p className="text-stone-400 max-w-sm mb-6 leading-relaxed">
               Experience the divine at Visit Mahakal, your gateway to Ujjain’s spiritual heart. We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours.
             </p>
@@ -18,10 +19,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/" className="hover:text-saffron-500 transition-colors">Home</Link></li>
+              <li><HashLink smooth to="/#top" className="hover:text-saffron-500 transition-colors">Home</HashLink></li>
               <li><Link to="/about" className="hover:text-saffron-500 transition-colors">About Us</Link></li>
-              <li><Link to="/#destinations" className="hover:text-saffron-500 transition-colors">Destinations</Link></li>
-              <li><Link to="/#testimonials" className="hover:text-saffron-500 transition-colors">Testimonials</Link></li>
+              <li><HashLink smooth to="/#destinations" className="hover:text-saffron-500 transition-colors">Destinations</HashLink></li>
+              <li><HashLink smooth to="/#testimonials" className="hover:text-saffron-500 transition-colors">Testimonials</HashLink></li>
               <li><Link to="/contact" className="hover:text-saffron-500 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
