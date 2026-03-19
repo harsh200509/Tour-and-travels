@@ -65,7 +65,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Decorative Om Frame & Running Design */}
-      <div className="absolute inset-4 md:inset-8 border border-saffron-500/30 rounded-3xl z-0 pointer-events-none flex flex-col justify-between overflow-hidden">
+      <div className="absolute top-24 bottom-4 left-4 right-4 md:top-28 md:bottom-8 md:left-8 md:right-8 border border-saffron-500/30 rounded-3xl z-0 pointer-events-none flex flex-col justify-between overflow-hidden">
         {/* Top Running Marquee */}
         <div className="w-full flex whitespace-nowrap opacity-30">
           <motion.div 
