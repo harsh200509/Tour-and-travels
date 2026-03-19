@@ -39,9 +39,9 @@ const packages = [
 
 export default function PackagesPage() {
   return (
-    <div className="pt-24 pb-16 bg-stone-50 min-h-screen">
+    <div className="pb-16 bg-stone-50 min-h-screen">
       {/* Header */}
-      <div className="relative bg-stone-900 py-20 mb-16 overflow-hidden">
+      <div className="relative bg-stone-900 pt-32 pb-20 mb-16 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         </div>

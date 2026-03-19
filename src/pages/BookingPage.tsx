@@ -62,8 +62,11 @@ export default function BookingPage() {
   };
 
   return (
-    <div className="pt-24 pb-16 bg-stone-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pb-16 bg-stone-50 min-h-screen relative">
+      {/* Dark background for the top section to support the transparent navbar */}
+      <div className="absolute top-0 left-0 w-full h-[300px] bg-stone-900"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side: Info & Aesthetics */}

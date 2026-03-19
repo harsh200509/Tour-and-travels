@@ -101,8 +101,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <span className="px-6 py-2 rounded-full border border-saffron-500/30 bg-saffron-500/10 text-saffron-400 text-sm font-medium tracking-widest uppercase backdrop-blur-md">
-            Your Trusted Spiritual Tour Partner
+          <span className="px-8 py-3 rounded-full border border-saffron-500/50 bg-saffron-500/20 text-saffron-400 text-2xl md:text-3xl font-bold tracking-wider backdrop-blur-md shadow-[0_0_30px_rgba(245,158,11,0.2)] inline-block">
+            जय श्री महाकाल
           </span>
         </motion.div>
         
@@ -112,7 +112,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.2, 0.65, 0.3, 0.9] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.2] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.2] tracking-tight"
           >
             Visit <span className="text-saffron-500 pb-2 pr-2 inline-block">Mahakaleshwar</span>
           </motion.h1>

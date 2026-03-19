@@ -40,7 +40,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div id="top" className="font-sans text-stone-900 bg-stone-50 min-h-screen flex flex-col relative">
+      <div id="top" className="font-sans text-stone-900 bg-stone-50 min-h-screen flex flex-col relative overflow-x-hidden">
         {/* Global Floating Action Buttons */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
           <a 
