@@ -117,14 +117,11 @@ export default function PackagesPage() {
       {/* Header */}
       <div className="relative bg-stone-900 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/shiv.jpg" alt="Sacred Shiva" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 to-stone-900"></div>
+          <img src="/shiv.jpg" alt="Sacred Shiva" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-stone-900/70"></div>
         </div>
         <div className="absolute inset-0 opacity-20 z-0">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0">
-          <span className="text-[20rem] text-saffron-500 font-serif leading-none">ॐ</span>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.span 
