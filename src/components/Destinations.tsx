@@ -45,7 +45,7 @@ export default function Destinations() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
-              onClick={() => navigate(`/contact?location=${dest.name}`)}
+              onClick={() => navigate(`/book?location=${dest.name}`)}
               className="group relative rounded-3xl overflow-hidden shadow-lg cursor-pointer h-96"
             >
               <img 

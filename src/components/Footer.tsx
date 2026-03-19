@@ -20,6 +20,7 @@ export default function Footer() {
             <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li><HashLink smooth to="/#top" className="hover:text-saffron-500 transition-colors">Home</HashLink></li>
+              <li><Link to="/packages" className="hover:text-saffron-500 transition-colors">Tour Packages</Link></li>
               <li><Link to="/about" className="hover:text-saffron-500 transition-colors">About Us</Link></li>
               <li><HashLink smooth to="/#destinations" className="hover:text-saffron-500 transition-colors">Destinations</HashLink></li>
               <li><HashLink smooth to="/#testimonials" className="hover:text-saffron-500 transition-colors">Testimonials</HashLink></li>
