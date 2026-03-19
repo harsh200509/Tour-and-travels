@@ -59,12 +59,16 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-stone-500 text-sm">
-            © {new Date().getFullYear()} Visit Mahakaleshwar. All Rights Reserved.
-          </p>
-          <div className="flex gap-4 text-sm text-stone-500">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4">
+            <div className="text-stone-500 text-sm flex flex-col items-center md:items-start gap-1">
+              <p>© {new Date().getFullYear()} Visit Mahakaleshwar. All Rights Reserved.</p>
+              <p className="text-xs text-stone-600 italic">Warning: All content on this website is protected by copyright law. Unauthorized use or reproduction is strictly prohibited.</p>
+              <p className="text-stone-400 mt-1">Developed by <span className="text-saffron-500 font-medium">Harsh and Rohit</span></p>
+            </div>
+            <div className="flex gap-6 text-sm text-stone-500">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>

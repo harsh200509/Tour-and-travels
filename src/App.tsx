@@ -5,7 +5,7 @@
 
 import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -46,10 +46,10 @@ export default function App() {
         <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-4">
           <Link 
             to="/book" 
-            className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform overflow-hidden"
             aria-label="Book Now via WhatsApp Icon"
           >
-            <MessageCircle size={28} />
+            <img src="/1.png" alt="WhatsApp" className="w-10 h-10 object-contain" />
           </Link>
         </div>
 
