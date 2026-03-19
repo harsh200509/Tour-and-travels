@@ -148,7 +148,6 @@ export default function Hero() {
               >
                 <option value="" disabled>Select location</option>
                 <option value="Ujjain">Ujjain</option>
-                <option value="Omkareshwar">Omkareshwar</option>
                 <option value="Indore">Indore</option>
                 <option value="Nalkheda">Nalkheda</option>
               </select>

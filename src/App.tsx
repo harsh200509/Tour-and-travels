@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
@@ -42,22 +42,25 @@ export default function App() {
       <ScrollToTop />
       <div id="top" className="font-sans text-stone-900 bg-stone-50 min-h-screen flex flex-col relative overflow-x-hidden">
         {/* Global Floating Action Buttons */}
+        {/* WhatsApp Button - Left Side */}
+        <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-4">
+          <Link 
+            to="/book" 
+            className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            aria-label="Book Now via WhatsApp Icon"
+          >
+            <MessageCircle size={28} />
+          </Link>
+        </div>
+
+        {/* Call Button - Right Side */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
           <a 
-            href="tel:+919617988929" 
+            href="tel:+919981246634" 
             className="w-14 h-14 bg-stone-900 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
             aria-label="Call Us"
           >
             <Phone size={24} />
-          </a>
-          <a 
-            href="https://wa.me/919617988929?text=*Jai Shree Mahakaal* 🙏%0A%0AHello, I would like to know more about your services." 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-            aria-label="WhatsApp Us"
-          >
-            <MessageCircle size={28} />
           </a>
         </div>
 

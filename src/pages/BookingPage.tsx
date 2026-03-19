@@ -54,7 +54,7 @@ export default function BookingPage() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccess(true);
-      window.open(`https://wa.me/919617988929?text=${text}`, '_blank');
+      window.open(`https://wa.me/919981246634?text=${text}`, '_blank');
       setTimeout(() => {
         navigate('/');
       }, 3000);
@@ -103,7 +103,7 @@ export default function BookingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-stone-400">Call us directly</p>
-                    <p className="font-medium">+91 96179 88929</p>
+                    <p className="font-medium">+91 9981246634</p>
                   </div>
                 </div>
               </div>
@@ -207,8 +207,7 @@ export default function BookingPage() {
                   >
                     <option value="" disabled>Choose a destination</option>
                     <option value="ujjain">Ujjain Darshan</option>
-                    <option value="indore">Indore Heritage</option>
-                    <option value="omkareshwar">Omkareshwar Yatra</option>
+                    <option value="indore">Indore & Surroundings</option>
                     <option value="nalkheda">Nalkheda Darshan</option>
                     <option value="custom">Custom Tour</option>
                   </select>

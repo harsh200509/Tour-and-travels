@@ -5,21 +5,19 @@ import { ArrowRight } from 'lucide-react';
 const destinations = [
   {
     name: 'Ujjain',
+    id: 'ujjain',
     image: 'https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=2069&auto=format&fit=crop',
     desc: 'Home to Mahakaleshwar Jyotirlinga'
   },
   {
-    name: 'Omkareshwar',
-    image: 'https://images.unsplash.com/photo-1667848342467-152e6f477026?q=80&w=2070&auto=format&fit=crop',
-    desc: 'Sacred island shaped like Om'
-  },
-  {
     name: 'Indore',
+    id: 'indore',
     image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?q=80&w=2070&auto=format&fit=crop',
     desc: 'The cleanest city & food capital'
   },
   {
     name: 'Nalkheda',
+    id: 'nalkheda',
     image: 'https://images.unsplash.com/photo-1600080301414-2228580004f4?q=80&w=2070&auto=format&fit=crop',
     desc: 'Maa Baglamukhi Temple'
   }
@@ -37,7 +35,7 @@ export default function Destinations() {
           <div className="w-24 h-1 bg-saffron-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {destinations.map((dest, index) => (
             <motion.div 
               key={dest.name}
@@ -45,7 +43,7 @@ export default function Destinations() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
-              onClick={() => navigate(`/book?location=${dest.name}`)}
+              onClick={() => navigate(`/packages#${dest.id}`)}
               className="group relative rounded-3xl overflow-hidden shadow-lg cursor-pointer h-96"
             >
               <img 
