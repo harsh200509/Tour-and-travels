@@ -66,8 +66,9 @@ export default function ContactPage() {
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-stone-900 mb-1">Phone Number</h4>
-                    <a href="tel:+919617988929" className="text-stone-600 hover:text-saffron-600 transition-colors">+91 96179 88929</a>
+                    <h4 className="font-bold text-stone-900 mb-1">Contact Person</h4>
+                    <p className="text-stone-600 mb-1">Durgesh Prajapat</p>
+                    <a href="tel:+919981246634" className="text-stone-600 hover:text-saffron-600 transition-colors">+91 9981246634</a>
                   </div>
                 </div>
 
@@ -105,7 +106,7 @@ export default function ContactPage() {
               <div className="bg-white p-4 rounded-2xl shadow-md border border-stone-100 inline-block">
                 {/* Placeholder QR Code - user will replace this */}
                 <img 
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=9617988929@upi&pn=Visit%20Mahakaleshwar" 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=9981246634@upi&pn=Durgesh%20Prajapat" 
                   alt="Payment QR Code" 
                   className="w-48 h-48 md:w-64 md:h-64 object-contain"
                 />

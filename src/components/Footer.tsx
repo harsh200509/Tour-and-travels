@@ -18,7 +18,7 @@ export default function Footer() {
               <p className="text-sm text-stone-400 mb-2">Scan for Payment</p>
               <div className="bg-white p-2 rounded-xl inline-block">
                 <img 
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=upi://pay?pa=9617988929@upi&pn=Visit%20Mahakaleshwar" 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=upi://pay?pa=9981246634@upi&pn=Durgesh%20Prajapat" 
                   alt="Payment QR Code" 
                   className="w-24 h-24 object-contain"
                 />
@@ -46,8 +46,9 @@ export default function Footer() {
                 <span className="text-stone-400">201, Patidar Tower, Freeganj, Ujjain, MP - 456010</span>
               </li>
               <li className="flex flex-col mt-4">
-                <span className="text-white font-medium">Phone:</span>
-                <a href="tel:+919617988929" className="text-stone-400 hover:text-saffron-500">+91 96179 88929</a>
+                <span className="text-white font-medium">Contact:</span>
+                <span className="text-stone-400">Durgesh Prajapat</span>
+                <a href="tel:+919981246634" className="text-stone-400 hover:text-saffron-500">+91 9981246634</a>
               </li>
               <li className="flex flex-col mt-4">
                 <span className="text-white font-medium">Hours:</span>
