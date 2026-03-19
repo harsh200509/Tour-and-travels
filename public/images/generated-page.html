@@ -1,0 +1,300 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-slate-100 selection:text-slate-900" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <a href="#" class="text-xl font-medium tracking-tighter text-slate-900">TRVL</a>
+                <div class="hidden md:flex items-center gap-8 text-sm text-slate-500 font-light">
+                    <a href="#" class="hover:text-slate-900 transition-colors">Destinations</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Experiences</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Villas</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Journal</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:block font-light">Sign in</a>
+                <button class="bg-slate-900 text-white px-4 py-2 rounded-full text-xs font-medium hover:bg-slate-800 transition-all active:scale-95">
+                    Start Planning
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-24 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-gray-50 text-xs text-slate-600 mb-8 font-light">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Now booking for Summer 2024
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-medium tracking-tighter text-slate-900 mb-6 max-w-4xl mx-auto leading-tight">
+            Design your escape.
+        </h1>
+        <p class="text-lg text-slate-500 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            Curated itineraries, exceptional properties, and seamless logistics. Experience the world without the friction.
+        </p>
+
+        <!-- Search / Filter Component -->
+        <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-[2rem] shadow-sm p-2 flex flex-col md:flex-row items-center gap-2 relative z-10 transition-shadow hover:shadow-md">
+            
+            <!-- Location -->
+            <div class="flex-1 flex items-center gap-3 px-5 py-3 w-full md:w-auto hover:bg-gray-50 rounded-full cursor-pointer transition-colors group">
+                <iconify-icon icon="solar:map-point-linear" class="text-slate-400 text-xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <div class="text-left flex-1">
+                    <div class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">Where</div>
+                    <input type="text" placeholder="Search destinations" class="w-full bg-transparent outline-none text-sm placeholder-slate-300 text-slate-900 truncate font-light">
+                </div>
+            </div>
+            
+            <div class="hidden md:block w-px h-10 bg-gray-100"></div>
+            
+            <!-- Dates -->
+            <div class="flex-1 flex items-center gap-3 px-5 py-3 w-full md:w-auto hover:bg-gray-50 rounded-full cursor-pointer transition-colors group">
+                <iconify-icon icon="solar:calendar-linear" class="text-slate-400 text-xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <div class="text-left">
+                    <div class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">When</div>
+                    <div class="text-sm text-slate-400 font-light group-hover:text-slate-900 transition-colors">Add dates</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:block w-px h-10 bg-gray-100"></div>
+            
+            <!-- Guests -->
+            <div class="flex-1 flex items-center gap-3 px-5 py-3 w-full md:w-auto hover:bg-gray-50 rounded-full cursor-pointer transition-colors group">
+                <iconify-icon icon="solar:users-group-rounded-linear" class="text-slate-400 text-xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <div class="text-left">
+                    <div class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">Who</div>
+                    <div class="text-sm text-slate-400 font-light group-hover:text-slate-900 transition-colors">Add guests</div>
+                </div>
+            </div>
+            
+            <button class="w-full md:w-auto bg-slate-900 text-white rounded-full p-4 flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors mt-2 md:mt-0 active:scale-95">
+                <iconify-icon icon="solar:magnifer-linear" class="text-lg"></iconify-icon>
+                <span class="md:hidden text-sm font-medium">Search</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Categories / Quick Links -->
+    <div class="border-y border-gray-100 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-start md:justify-center gap-12 overflow-x-auto no-scrollbar">
+            <a href="#" class="flex flex-col items-center gap-3 group min-w-max">
+                <iconify-icon icon="solar:plain-2-linear" class="text-slate-400 text-2xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <span class="text-xs text-slate-500 group-hover:text-slate-900 font-light transition-colors">Flights</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group min-w-max">
+                <iconify-icon icon="solar:buildings-2-linear" class="text-slate-400 text-2xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <span class="text-xs text-slate-500 group-hover:text-slate-900 font-light transition-colors">Stays</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group min-w-max">
+                <iconify-icon icon="solar:camera-linear" class="text-slate-400 text-2xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <span class="text-xs text-slate-500 group-hover:text-slate-900 font-light transition-colors">Experiences</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group min-w-max">
+                <iconify-icon icon="solar:map-linear" class="text-slate-400 text-2xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <span class="text-xs text-slate-500 group-hover:text-slate-900 font-light transition-colors">Guides</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group min-w-max">
+                <iconify-icon icon="solar:steering-wheel-linear" class="text-slate-400 text-2xl group-hover:text-slate-900 transition-colors"></iconify-icon>
+                <span class="text-xs text-slate-500 group-hover:text-slate-900 font-light transition-colors">Transport</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Featured Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <h2 class="text-3xl font-medium tracking-tight text-slate-900 mb-2">Trending collections</h2>
+                <p class="text-base text-slate-500 font-light">Handpicked destinations for your next adventure.</p>
+            </div>
+            <a href="#" class="hidden md:flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-500 transition-colors">
+                Explore all <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <a href="#" class="group block cursor-pointer">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-5 bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Kyoto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <iconify-icon icon="solar:heart-linear" class="text-lg block"></iconify-icon>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-medium text-slate-900 tracking-tight">Kyoto, Japan</h3>
+                        <p class="text-sm text-slate-500 font-light mt-1">Ancient temples &amp; serene gardens</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-400 block font-light">From</span>
+                        <span class="text-sm font-medium text-slate-900">$1,200</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#" class="group block cursor-pointer">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-5 bg-gray-100 relative">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Amalfi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <iconify-icon icon="solar:heart-linear" class="text-lg block"></iconify-icon>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-medium text-slate-900 tracking-tight">Amalfi Coast, Italy</h3>
+                        <p class="text-sm text-slate-500 font-light mt-1">Dramatic cliffs &amp; azure waters</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-400 block font-light">From</span>
+                        <span class="text-sm font-medium text-slate-900">$1,850</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#" class="group block cursor-pointer">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-5 bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Dubai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <iconify-icon icon="solar:heart-linear" class="text-lg block"></iconify-icon>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-medium text-slate-900 tracking-tight">Dubai, UAE</h3>
+                        <p class="text-sm text-slate-500 font-light mt-1">Modern luxury &amp; desert dunes</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-400 block font-light">From</span>
+                        <span class="text-sm font-medium text-slate-900">$950</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="border-t border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 relative z-10 p-2">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&amp;fit=crop&amp;q=80&amp;w=1000" alt="Traveler" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -bottom-6 -left-6 w-full h-full rounded-3xl border border-gray-100 z-0 hidden md:block"></div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-slate-900 mb-6">Travel without the friction.</h2>
+                    <p class="text-base text-slate-500 mb-8 font-light leading-relaxed">
+                        We handle the logistics so you can focus on the experience. From seamless bookings to 24/7 concierge support, every journey is optimized for tranquility.
+                    </p>
+                    <ul class="space-y-5 mb-10">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-0.5 w-6 h-6 rounded-full bg-slate-50 border border-gray-200 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-slate-900 text-xs"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-900">Expert curation</h4>
+                                <span class="text-sm text-slate-500 font-light block mt-1">Accommodations and experiences verified by our global network.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-0.5 w-6 h-6 rounded-full bg-slate-50 border border-gray-200 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-slate-900 text-xs"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-900">Total flexibility</h4>
+                                <span class="text-sm text-slate-500 font-light block mt-1">Free cancellation and modifications on most properties.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start gap-4">
+                            <div class="mt-0.5 w-6 h-6 rounded-full bg-slate-50 border border-gray-200 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:check-read-linear" class="text-slate-900 text-xs"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-900">Priority support</h4>
+                                <span class="text-sm text-slate-500 font-light block mt-1">Direct access to human agents, anytime, anywhere.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-slate-900 hover:text-slate-500 transition-colors pb-1 border-b border-slate-900 hover:border-slate-500">
+                        Read our manifesto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 bg-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <div class="md:col-span-4 lg:col-span-5">
+                <div class="text-xl font-medium tracking-tighter mb-4 text-slate-900">TRVL</div>
+                <p class="text-sm text-slate-500 mb-8 font-light max-w-sm">Elevating the way you explore the world. Precision-crafted journeys for the modern traveler.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-slate-400 hover:text-slate-900 hover:border-slate-300 transition-colors">
+                        <iconify-icon icon="solar:global-linear" class="text-lg"></iconify-icon>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-slate-400 hover:text-slate-900 hover:border-slate-300 transition-colors">
+                        <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2">
+                <h4 class="text-xs font-medium text-slate-900 mb-5 uppercase tracking-wider">Company</h4>
+                <ul class="space-y-4 text-sm text-slate-500 font-light">
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Press</a></li>
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Partners</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 lg:col-span-2">
+                <h4 class="text-xs font-medium text-slate-900 mb-5 uppercase tracking-wider">Support</h4>
+                <ul class="space-y-4 text-sm text-slate-500 font-light">
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Help Center</a></li>
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Safety</a></li>
+                    <li><a href="#" class="hover:text-slate-900 transition-colors">Cancellation</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-4 lg:col-span-3">
+                <h4 class="text-xs font-medium text-slate-900 mb-5 uppercase tracking-wider">Newsletter</h4>
+                <p class="text-xs text-slate-500 mb-4 font-light">Inspiring destinations delivered weekly.</p>
+                <div class="flex gap-2 relative">
+                    <input type="email" placeholder="Email address" class="w-full bg-white border border-gray-200 rounded-lg pl-4 pr-12 py-2.5 text-sm text-slate-900 outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-400 transition-all placeholder-slate-400 font-light">
+                    <button class="absolute right-1 top-1 bottom-1 px-3 text-slate-400 hover:text-slate-900 transition-colors flex items-center justify-center">
+                        <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-100 gap-4">
+            <div class="flex items-center gap-6 text-xs text-slate-400 font-light">
+                <span>© 2024 TRVL.</span>
+                <a href="#" class="hover:text-slate-900 transition-colors">Privacy</a>
+                <a href="#" class="hover:text-slate-900 transition-colors">Terms</a>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-400 font-light">
+                <iconify-icon icon="solar:earth-linear" class="text-sm"></iconify-icon>
+                <span>English (US)</span>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>

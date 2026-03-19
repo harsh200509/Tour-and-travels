@@ -4,9 +4,12 @@ import { Send, MapPin, Calendar, Clock, Users } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1625834317364-b32c140fd360?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=2070&auto=format&fit=crop"
+  "/images/slide1.webp",
+  "/images/slide2.webp",
+  "/images/slide3.webp",
+  "/images/slide4.webp",
+  "/images/slide5.webp",
+  "/images/slide6.webp"
 ];
 
 export default function Hero() {
@@ -55,7 +58,7 @@ export default function Hero() {
           >
             <img 
               src={IMAGES[currentImageIndex]} 
-              alt="Mahakaleshwar Temple" 
+              alt={`Beautiful view of Mahakaleshwar temple - Slide ${currentImageIndex + 1}`} 
               className="w-full h-full object-cover opacity-60"
             />
           </motion.div>
