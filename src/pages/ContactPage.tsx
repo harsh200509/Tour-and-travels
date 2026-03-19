@@ -1,44 +1,14 @@
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
-  const [searchParams] = useSearchParams();
-  const [formData, setFormData] = useState({
-    location: searchParams.get('location') || '',
-    date: searchParams.get('date') || '',
-    time: searchParams.get('time') || '',
-    guests: searchParams.get('guests') || '1',
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const { location, date, time, guests, name, email, subject, message } = formData;
-    
-    let text = `*New Inquiry from Visit Mahakal*%0A%0A`;
-    text += `*Name:* ${name}%0A`;
-    text += `*Email:* ${email}%0A`;
-    if (location) text += `*Location:* ${location}%0A`;
-    if (date) text += `*Date:* ${date}%0A`;
-    if (time) text += `*Time:* ${time}%0A`;
-    if (guests) text += `*Guests:* ${guests}%0A`;
-    text += `*Subject:* ${subject}%0A`;
-    text += `*Message:* ${message}`;
-    
-    window.open(`https://wa.me/919617988929?text=${text}`, '_blank');
-  };
-
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-stone-50 min-h-screen relative">
       {/* Hero Image for Contact Page */}
       <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <motion.div 
@@ -72,13 +42,13 @@ export default function ContactPage() {
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-1 space-y-10"
+              className="space-y-10"
             >
               <div>
                 <span className="text-saffron-600 font-medium tracking-wider uppercase">Get in Touch</span>
@@ -127,119 +97,21 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-stone-100"
+              className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-stone-100 flex flex-col items-center text-center"
             >
-              <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6">Send us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                {/* Pre-filled Trip Details if any */}
-                <div className="bg-stone-50 p-6 rounded-2xl border border-stone-100 mb-8">
-                  <h4 className="font-bold text-stone-900 mb-4 flex items-center gap-2">
-                    <MapPin size={18} className="text-saffron-500" /> Trip Details
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-stone-700 mb-1">Location</label>
-                      <select 
-                        className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-saffron-500"
-                        value={formData.location}
-                        onChange={(e) => setFormData({...formData, location: e.target.value})}
-                      >
-                        <option value="">Select location</option>
-                        <option value="Ujjain">Ujjain</option>
-                        <option value="Omkareshwar">Omkareshwar</option>
-                        <option value="Indore">Indore</option>
-                        <option value="Nalkheda">Nalkheda</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-stone-700 mb-1">Date</label>
-                      <input 
-                        type="date" 
-                        className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-saffron-500"
-                        value={formData.date}
-                        onChange={(e) => setFormData({...formData, date: e.target.value})}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-stone-700 mb-1">Time</label>
-                      <input 
-                        type="time" 
-                        className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-saffron-500"
-                        value={formData.time}
-                        onChange={(e) => setFormData({...formData, time: e.target.value})}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-stone-700 mb-1">Guests</label>
-                      <input 
-                        type="number" 
-                        min="1"
-                        className="w-full bg-white border border-stone-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-saffron-500"
-                        value={formData.guests}
-                        onChange={(e) => setFormData({...formData, guests: e.target.value})}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-stone-700 mb-2">Full Name *</label>
-                    <input 
-                      type="text" 
-                      required
-                      className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:bg-white transition-colors"
-                      placeholder="John Doe"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-stone-700 mb-2">Email Address *</label>
-                    <input 
-                      type="email" 
-                      required
-                      className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:bg-white transition-colors"
-                      placeholder="john@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-stone-700 mb-2">Subject *</label>
-                  <input 
-                    type="text" 
-                    required
-                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:bg-white transition-colors"
-                    placeholder="How can we help?"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-stone-700 mb-2">Message *</label>
-                  <textarea 
-                    required
-                    rows={5}
-                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:bg-white transition-colors resize-none"
-                    placeholder="Write your message here..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  ></textarea>
-                </div>
-
-                <button 
-                  type="submit"
-                  className="w-full bg-saffron-600 hover:bg-saffron-700 text-white font-medium py-4 px-6 rounded-xl transition-colors flex items-center justify-center gap-2 text-lg shadow-lg shadow-saffron-600/30"
-                >
-                  <Send size={20} />
-                  Send Message via WhatsApp
-                </button>
-              </form>
+              <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4">Scan for Payment</h3>
+              <p className="text-stone-600 mb-8">Scan the QR code below to make a secure payment for your booking or services.</p>
+              
+              <div className="bg-white p-4 rounded-2xl shadow-md border border-stone-100 inline-block">
+                {/* Placeholder QR Code - user will replace this */}
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=9617988929@upi&pn=Visit%20Mahakaleshwar" 
+                  alt="Payment QR Code" 
+                  className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                />
+              </div>
+              
+              <p className="mt-6 text-sm text-stone-500">For any payment related queries, please contact us.</p>
             </motion.div>
 
           </div>

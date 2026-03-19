@@ -13,6 +13,7 @@ export default function BookingPage() {
     name: '',
     mobile: '',
     email: '',
+    fromLocation: '',
     package: '',
     date: '',
     guests: '1',
@@ -37,14 +38,27 @@ export default function BookingPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
+    const { name, mobile, email, fromLocation, package: pkg, date, guests, message } = formData;
+    
+    let text = `*Jai Shree Mahakaal* 🙏%0A%0A`;
+    text += `*New Booking Request*%0A%0A`;
+    text += `*Name:* ${name}%0A`;
+    text += `*Mobile:* ${mobile}%0A`;
+    if (email) text += `*Email:* ${email}%0A`;
+    if (fromLocation) text += `*From (Client Location):* ${fromLocation}%0A`;
+    text += `*Package/Destination:* ${pkg}%0A`;
+    text += `*Travel Date:* ${date}%0A`;
+    text += `*Guests:* ${guests}%0A`;
+    if (message) text += `*Additional Requirements:* ${message}`;
+    
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccess(true);
+      window.open(`https://wa.me/919617988929?text=${text}`, '_blank');
       setTimeout(() => {
         navigate('/');
       }, 3000);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -150,22 +164,37 @@ export default function BookingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-stone-700 flex items-center gap-2">
-                    <Mail size={16} className="text-saffron-500" /> Email Address (Optional)
-                  </label>
-                  <input 
-                    type="email" 
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-saffron-500 focus:ring-2 focus:ring-saffron-200 outline-none transition-all bg-stone-50 focus:bg-white"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-stone-700 flex items-center gap-2">
+                      <Mail size={16} className="text-saffron-500" /> Email Address (Optional)
+                    </label>
+                    <input 
+                      type="email" 
+                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-saffron-500 focus:ring-2 focus:ring-saffron-200 outline-none transition-all bg-stone-50 focus:bg-white"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-stone-700 flex items-center gap-2">
+                      <MapPin size={16} className="text-saffron-500" /> From (Your Location)
+                    </label>
+                    <input 
+                      type="text" 
+                      required
+                      placeholder="e.g. Mumbai, Delhi"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-saffron-500 focus:ring-2 focus:ring-saffron-200 outline-none transition-all bg-stone-50 focus:bg-white"
+                      value={formData.fromLocation}
+                      onChange={(e) => setFormData({...formData, fromLocation: e.target.value})}
+                    />
+                  </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-stone-700 flex items-center gap-2">
-                    <MapPin size={16} className="text-saffron-500" /> Select Package
+                    <MapPin size={16} className="text-saffron-500" /> Select Package / Destination
                   </label>
                   <select 
                     required

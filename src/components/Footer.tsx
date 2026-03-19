@@ -7,13 +7,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <HashLink smooth to="/#top" className="font-serif text-3xl font-bold text-white mb-6 block">
-              Visit Mahakal
+              Visit Mahakaleshwar
             </HashLink>
             <p className="text-stone-400 max-w-sm mb-6 leading-relaxed">
-              Experience the divine at Visit Mahakal, your gateway to Ujjain’s spiritual heart. We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours.
+              Experience the divine at Visit Mahakaleshwar, your gateway to Ujjain’s spiritual heart. We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours.
             </p>
+            <div className="mt-6">
+              <p className="text-sm text-stone-400 mb-2">Scan for Payment</p>
+              <div className="bg-white p-2 rounded-xl inline-block">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=upi://pay?pa=9617988929@upi&pn=Visit%20Mahakaleshwar" 
+                  alt="Payment QR Code" 
+                  className="w-24 h-24 object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           <div>
@@ -50,7 +60,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-stone-500 text-sm">
-            © {new Date().getFullYear()} Visit Mahakal. All Rights Reserved.
+            © {new Date().getFullYear()} Visit Mahakaleshwar. All Rights Reserved.
           </p>
           <div className="flex gap-4 text-sm text-stone-500">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

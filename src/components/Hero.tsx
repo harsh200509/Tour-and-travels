@@ -1,13 +1,28 @@
 import { useNavigate } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { Send, MapPin, Calendar, Clock, Users } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+const IMAGES = [
+  "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=2070&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1625834317364-b32c140fd360?q=80&w=2070&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=2070&auto=format&fit=crop"
+];
 
 export default function Hero() {
   const navigate = useNavigate();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity1 = useTransform(scrollY, [0, 500], [1, 0]);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % IMAGES.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   const [formData, setFormData] = useState({
     location: '',
@@ -29,33 +44,54 @@ export default function Hero() {
         style={{ y: y1, opacity: opacity1 }}
         className="absolute inset-0 z-0"
       >
-        <motion.div 
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 15, ease: "easeOut" }}
-          className="w-full h-full"
-        >
-          <img 
-            src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=2070&auto=format&fit=crop" 
-            alt="Mahakaleshwar Temple" 
-            className="w-full h-full object-cover opacity-60"
-          />
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={currentImageIndex}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <img 
+              src={IMAGES[currentImageIndex]} 
+              alt="Mahakaleshwar Temple" 
+              className="w-full h-full object-cover opacity-60"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/90 via-stone-950/60 to-stone-950"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay"></div>
       </motion.div>
 
-      {/* Massive Om Symbol Background */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.07, scale: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      >
-        <span className="text-[40rem] md:text-[60rem] text-saffron-500 font-serif leading-none select-none blur-sm">
-          ॐ
-        </span>
-      </motion.div>
+      {/* Decorative Om Frame & Running Design */}
+      <div className="absolute inset-4 md:inset-8 border border-saffron-500/30 rounded-3xl z-0 pointer-events-none flex flex-col justify-between overflow-hidden">
+        {/* Top Running Marquee */}
+        <div className="w-full flex whitespace-nowrap opacity-30">
+          <motion.div 
+            animate={{ x: ["0%", "-50%"] }} 
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            className="flex gap-8 text-saffron-500 font-serif text-xl py-2"
+          >
+            {[...Array(20)].map((_, i) => <span key={i}>ॐ नमः शिवाय</span>)}
+          </motion.div>
+        </div>
+
+        {/* Center Oms for Frame */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 text-saffron-500/50 text-4xl font-serif rotate-90">ॐ</div>
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 text-saffron-500/50 text-4xl font-serif -rotate-90">ॐ</div>
+
+        {/* Bottom Running Marquee */}
+        <div className="w-full flex whitespace-nowrap opacity-30">
+          <motion.div 
+            animate={{ x: ["-50%", "0%"] }} 
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            className="flex gap-8 text-saffron-500 font-serif text-xl py-2"
+          >
+            {[...Array(20)].map((_, i) => <span key={i}>ॐ नमः शिवाय</span>)}
+          </motion.div>
+        </div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mt-12">
         {/* Animated Badge */}
@@ -66,19 +102,19 @@ export default function Hero() {
           className="mb-8"
         >
           <span className="px-6 py-2 rounded-full border border-saffron-500/30 bg-saffron-500/10 text-saffron-400 text-sm font-medium tracking-widest uppercase backdrop-blur-md">
-            Awaken Your Spirit
+            Your Trusted Spiritual Tour Partner
           </span>
         </motion.div>
         
         {/* Main Heading with Staggered Reveal */}
-        <div className="overflow-hidden mb-6">
+        <div className="mb-6 py-2 px-4 overflow-visible">
           <motion.h1 
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.2, 0.65, 0.3, 0.9] }}
-            className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold text-white leading-[1.1] tracking-tight"
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.2, 0.65, 0.3, 0.9] }}
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.2] tracking-tight"
           >
-            Divine <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron-400 to-saffron-600">Mahakal</span>
+            Visit <span className="text-saffron-500 pb-2 pr-2 inline-block">Mahakaleshwar</span>
           </motion.h1>
         </div>
 
@@ -88,7 +124,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           className="text-lg md:text-2xl text-stone-300 max-w-3xl mb-16 font-light leading-relaxed"
         >
-          Embark on a transcendent journey. We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours of the sacred Jyotirlinga.
+          We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours of the sacred Jyotirlinga.
         </motion.p>
 
         {/* Floating Booking Bar */}
@@ -159,9 +195,6 @@ export default function Hero() {
           </form>
         </motion.div>
       </div>
-      
-      {/* Decorative Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-stone-50 to-transparent z-10"></div>
     </section>
   );
 }

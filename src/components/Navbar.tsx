@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <HashLink smooth to="/#top" className={`font-serif text-2xl font-bold ${isScrolled ? 'text-saffron-600' : 'text-white'}`}>
-              Visit Mahakal
+              Visit Mahakaleshwar
             </HashLink>
           </div>
           
@@ -51,10 +51,10 @@ export default function Navbar() {
                 {link.name}
               </HashLink>
             ))}
-            <a href="tel:+919617988929" className="flex items-center gap-2 bg-saffron-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-saffron-700 transition-colors shadow-lg shadow-saffron-600/30">
-              <Phone size={18} />
-              <span>+91 96179 88929</span>
-            </a>
+            <Link to="/book" className="flex items-center gap-2 bg-saffron-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-saffron-700 transition-colors shadow-lg shadow-saffron-600/30">
+              <Calendar size={18} />
+              <span>Book Now</span>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -83,10 +83,10 @@ export default function Navbar() {
               {link.name}
             </HashLink>
           ))}
-          <a href="tel:+919617988929" className="flex items-center gap-2 bg-saffron-600 text-white px-6 py-3 rounded-full font-medium">
-            <Phone size={18} />
-            <span>+91 96179 88929</span>
-          </a>
+          <Link to="/book" className="flex items-center gap-2 bg-saffron-600 text-white px-6 py-3 rounded-full font-medium">
+            <Calendar size={18} />
+            <span>Book Now</span>
+          </Link>
         </motion.div>
       )}
     </nav>
