@@ -16,8 +16,8 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=2070&auto=format&fit=crop" 
-                alt="Spiritual Journey" 
+                src="/Ujjain/mahakaleshwar.jpg" 
+                alt="Mahakal Temple" 
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-saffron-600/10 mix-blend-overlay"></div>

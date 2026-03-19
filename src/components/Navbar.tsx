@@ -26,7 +26,7 @@ export default function Navbar() {
     { name: 'Tour Packages', href: '/packages' },
     { name: 'Destinations', href: '/#destinations' },
     { name: 'About Us', href: '/about' },
-    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Reviews', href: '/#reviews' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -35,8 +35,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <HashLink smooth to="/#top" className={`font-serif text-2xl font-bold ${isScrolled ? 'text-saffron-600' : 'text-white'}`}>
-              Visit Mahakaleshwar
+            <HashLink smooth to="/#top" className={`font-serif text-2xl font-bold flex items-center gap-2 ${isScrolled ? 'text-saffron-600' : 'text-white'}`}>
+              <img src="/logo.jpeg" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+              <span>Visit Mahakaleshwar</span>
             </HashLink>
           </div>
           

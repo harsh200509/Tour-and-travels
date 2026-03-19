@@ -6,19 +6,19 @@ const destinations = [
   {
     name: 'Ujjain',
     id: 'ujjain',
-    image: 'https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=2069&auto=format&fit=crop',
+    image: '/Ujjain/ujjain.jpg',
     desc: 'Home to Mahakaleshwar Jyotirlinga'
   },
   {
     name: 'Indore',
     id: 'indore',
-    image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?q=80&w=2070&auto=format&fit=crop',
+    image: '/Indore/indore.jpg',
     desc: 'The cleanest city & food capital'
   },
   {
     name: 'Nalkheda',
     id: 'nalkheda',
-    image: 'https://images.unsplash.com/photo-1600080301414-2228580004f4?q=80&w=2070&auto=format&fit=crop',
+    image: '/Nalkheda/nalkheda.jpg',
     desc: 'Maa Baglamukhi Temple'
   }
 ];

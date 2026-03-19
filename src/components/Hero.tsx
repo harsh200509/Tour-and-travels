@@ -1,15 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { Send, MapPin, Calendar, Clock, Users } from 'lucide-react';
+import { Send, MapPin, Calendar, Users } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const IMAGES = [
-  "/images/slide1.webp",
-  "/images/slide2.webp",
-  "/images/slide3.webp",
-  "/images/slide4.webp",
-  "/images/slide5.webp",
-  "/images/slide6.webp"
+  "/Slides/slide1.jpg",
+  "/Slides/slide2.jpg",
+  "/Slides/slide3.jpg",
+  "/Slides/slide4.jpg",
+  "/Slides/slide5.jpg",
+  "/Slides/slide6.jpg"
 ];
 
 export default function Hero() {
@@ -30,7 +30,6 @@ export default function Hero() {
   const [formData, setFormData] = useState({
     location: '',
     date: '',
-    time: '',
     guests: '1'
   });
 
@@ -161,17 +160,6 @@ export default function Hero() {
                 className="w-full border-b border-stone-500/50 py-2 focus:outline-none focus:border-saffron-500 bg-transparent text-white transition-colors [color-scheme:dark]"
                 value={formData.date}
                 onChange={(e) => setFormData({...formData, date: e.target.value})}
-              />
-            </div>
-
-            <div className="flex flex-col text-left">
-              <label className="text-xs font-medium text-stone-300 mb-2 flex items-center gap-1.5 uppercase tracking-wider"><Clock size={14} className="text-saffron-500"/> Time</label>
-              <input 
-                type="time" 
-                required
-                className="w-full border-b border-stone-500/50 py-2 focus:outline-none focus:border-saffron-500 bg-transparent text-white transition-colors [color-scheme:dark]"
-                value={formData.time}
-                onChange={(e) => setFormData({...formData, time: e.target.value})}
               />
             </div>
 

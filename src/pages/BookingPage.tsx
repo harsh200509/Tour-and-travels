@@ -78,7 +78,7 @@ export default function BookingPage() {
           >
             <div className="absolute inset-0">
               <img 
-                src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=2070&auto=format&fit=crop" 
+                src="spritual.jpg" 
                 alt="Mahakal Temple" 
                 className="w-full h-full object-cover"
               />

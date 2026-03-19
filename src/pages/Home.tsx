@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import Destinations from '../components/Destinations';
 import About from '../components/About';
 import WhyChooseUs from '../components/WhyChooseUs';
-import Testimonials from '../components/Testimonials';
+import Reviews from '../components/Reviews';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Destinations />
       <About />
       <WhyChooseUs />
-      <Testimonials />
+      <Reviews />
     </>
   );
 }

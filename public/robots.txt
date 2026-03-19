@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://visitmahakaleshwar.com/sitemap.xml

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "rating": 5,
+    "comment": "Excellent service! We had a very smooth Mahakal Darshan thanks to Visit Mahakal team. The guide was very knowledgeable.",
+    "date": "2 days ago"
+  },
+  {
+    "id": 2,
+    "name": "Sunita Verma",
+    "rating": 5,
+    "comment": "The BEST travel agency in Ujjain. They handled everything from our arrival till departure with such care. Strongly recommended for families.",
+    "date": "1 week ago"
+  }
+]

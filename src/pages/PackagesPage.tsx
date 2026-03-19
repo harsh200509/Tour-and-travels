@@ -8,46 +8,46 @@ const destinationsData = [
     id: 'ujjain',
     title: 'Ujjain Darshan',
     duration: '1-2 Days',
-    bgImage: 'https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=2069&auto=format&fit=crop',
+    bgImage: '/Ujjain/ujjain.jpg',
     description: 'Experience the spiritual heart of India with our comprehensive Ujjain tour.',
     places: [
-      { name: 'Mahakaleshwar', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mahakal Lok', image: 'https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Harsiddhi Temple', image: 'https://images.unsplash.com/photo-1600080314059-d8204d80d2d3?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Kal Bhairav', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Gadkalika Temple', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Siddhavat', image: 'https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Sandipani Ashram', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chintaman Ganesh', image: 'https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Ashwin Vinayak', image: 'https://images.unsplash.com/photo-1600080314059-d8204d80d2d3?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Ram Ghat', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mangalnath Temple', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' }
+      { name: 'Mahakaleshwar', image: '/Ujjain/mahakaleshwar.jpg' },
+      { name: 'Mahakal Lok', image: '/Ujjain/mahakallok.jpg' },
+      { name: 'Harsiddhi Temple', image: '/Ujjain/harsiddhi.jpg' },
+      { name: 'Kal Bhairav', image: '/Ujjain/kalbhairav.jpg' },
+      { name: 'Gadkalika Temple', image: '/Ujjain/gadkalika.jpg' },
+      { name: 'Siddhavat', image: '/Ujjain/sidwat.jpg' },
+      { name: 'Sandipani Ashram', image: '/Ujjain/sandipani.jpg' },
+      { name: 'Chintaman Ganesh', image: '/Ujjain/chintaman.jpg' },
+      { name: 'Ashtavinayak', image: '/Ujjain/ashtvinayak.jpg' },
+      { name: 'Ram Ghat', image: '/Ujjain/ramghat.jpg' },
+      { name: 'Mangalnath Temple', image: '/Ujjain/mangalnath.jpg' }
     ]
   },
   {
     id: 'indore',
     title: 'Indore & Surroundings',
     duration: '1-2 Days',
-    bgImage: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?q=80&w=2070&auto=format&fit=crop',
+    bgImage: '/Indore/indore.jpg',
     description: 'Explore the cleanest city of India, known for its rich history, street food, and nearby natural wonders.',
     places: [
-      { name: 'Khajrana Ganesh Temple', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Pitra Parvat', image: 'https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Rajwada', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop' },
-      { name: '56 Dukan', image: 'https://images.unsplash.com/photo-1600080314059-d8204d80d2d3?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Patalpani', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Pachmarhi', image: 'https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Omkareshwar', image: 'https://images.unsplash.com/photo-1667848342467-152e6f477026?q=80&w=800&auto=format&fit=crop' }
+      { name: 'Khajrana Ganesh Temple', image: '/Indore/khajrana.jpg' },
+      { name: 'Pitra Parvat', image: '/Indore/pitraparvat.jpg' },
+      { name: 'Rajwada', image: '/Indore/rajwada.jpg' },
+      { name: '56 Dukan', image: '/Indore/56dukan.jpg' },
+      { name: 'Patalpani', image: '/Indore/patalpani.jpg' },
+      { name: 'Pachmarhi', image: '/Indore/panchmadi.jpg' },
+      { name: 'Omkareshwar', image: '/Indore/omkareshwar.jpg' }
     ]
   },
   {
     id: 'nalkheda',
     title: 'Nalkheda Darshan',
     duration: '1 Day',
-    bgImage: 'https://images.unsplash.com/photo-1600080301414-2228580004f4?q=80&w=2070&auto=format&fit=crop',
+    bgImage: '/Nalkheda/nalkheda.jpg',
     description: 'Seek blessings at one of the most powerful Shakti Peethas.',
     places: [
-      { name: 'Baglamukhi Temple', image: 'https://images.unsplash.com/photo-1600080314059-d8204d80d2d3?q=80&w=800&auto=format&fit=crop' }
+      { name: 'Baglamukhi Temple', image: '/Nalkheda/banglamukhi.jpg' }
     ]
   }
 ];
@@ -116,10 +116,14 @@ export default function PackagesPage() {
     <div className="pb-16 bg-stone-50 min-h-screen">
       {/* Header */}
       <div className="relative bg-stone-900 pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 z-0">
+          <img src="/shiv.jpg" alt="Sacred Shiva" className="w-full h-full object-cover opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 to-stone-900"></div>
+        </div>
+        <div className="absolute inset-0 opacity-20 z-0">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0">
           <span className="text-[20rem] text-saffron-500 font-serif leading-none">ॐ</span>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

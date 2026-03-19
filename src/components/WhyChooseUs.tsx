@@ -2,17 +2,17 @@ import { motion } from 'motion/react';
 
 const features = [
   {
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop',
+    image: '/whychooseus/localexpert.jpg',
     title: 'Local Experts',
     desc: "Our guides are locals who know the deep history, temple timings, and hidden spiritual spots of Ujjain."
   },
   {
-    image: 'https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=2067&auto=format&fit=crop',
+    image: '/whychooseus/safety.jpg',
     title: 'Safe & Comfortable',
     desc: 'Travel with peace of mind in our sanitized vehicles with experienced drivers who treat you like family.'
   },
   {
-    image: 'https://images.unsplash.com/photo-1583373834259-46cc92173cb7?q=80&w=2074&auto=format&fit=crop',
+    image: '/whychooseus/pricing.jpg',
     title: 'Honest Pricing',
     desc: 'No hidden fees or surprise charges. We believe in transparent pricing so you can focus purely on your devotion.'
   }

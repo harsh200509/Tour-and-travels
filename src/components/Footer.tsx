@@ -8,22 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
           <div className="lg:col-span-1">
-            <HashLink smooth to="/#top" className="font-serif text-3xl font-bold text-white mb-6 block">
-              Visit Mahakaleshwar
+            <HashLink smooth to="/#top" className="font-serif text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <img src="/logo.jpeg" alt="Logo" className="w-12 h-12 rounded-full object-cover" />
+              <span>Visit Mahakaleshwar</span>
             </HashLink>
             <p className="text-stone-400 max-w-sm mb-6 leading-relaxed">
               Experience the divine at Visit Mahakaleshwar, your gateway to Ujjain’s spiritual heart. We offer seamless darshan bookings, Bhasma Aarti assistance, and guided tours.
             </p>
-            <div className="mt-6">
-              <p className="text-sm text-stone-400 mb-2">Scan for Payment</p>
-              <div className="bg-white p-2 rounded-xl inline-block">
-                <img 
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=upi://pay?pa=9981246634@upi&pn=Durgesh%20Prajapat" 
-                  alt="Payment QR Code" 
-                  className="w-24 h-24 object-contain"
-                />
-              </div>
-            </div>
           </div>
 
           <div>
@@ -33,7 +24,7 @@ export default function Footer() {
               <li><Link to="/packages" className="hover:text-saffron-500 transition-colors">Tour Packages</Link></li>
               <li><Link to="/about" className="hover:text-saffron-500 transition-colors">About Us</Link></li>
               <li><HashLink smooth to="/#destinations" className="hover:text-saffron-500 transition-colors">Destinations</HashLink></li>
-              <li><HashLink smooth to="/#testimonials" className="hover:text-saffron-500 transition-colors">Testimonials</HashLink></li>
+              <li><HashLink smooth to="/#reviews" className="hover:text-saffron-500 transition-colors">Reviews</HashLink></li>
               <li><Link to="/contact" className="hover:text-saffron-500 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
@@ -50,11 +41,19 @@ export default function Footer() {
                 <span className="text-stone-400">Durgesh Prajapat</span>
                 <a href="tel:+919981246634" className="text-stone-400 hover:text-saffron-500">+91 9981246634</a>
               </li>
-              <li className="flex flex-col mt-4">
-                <span className="text-white font-medium">Hours:</span>
-                <span className="text-stone-400">Mon – Sun: 10 am – 6 pm</span>
-              </li>
             </ul>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-end">
+            <h4 className="text-white font-bold text-lg mb-6">Scan for Payment</h4>
+            <div className="bg-white p-4 rounded-2xl inline-block shadow-2xl">
+              <img 
+                src="qrcode.jpg" 
+                alt="Payment QR Code" 
+                className="w-48 h-48 object-contain"
+              />
+            </div>
+            <p className="mt-4 text-sm text-stone-500 font-medium">Accepting all UPI Payments</p>
           </div>
 
         </div>

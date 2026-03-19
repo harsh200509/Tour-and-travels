@@ -52,8 +52,8 @@ export default function AboutPage() {
               className="lg:w-1/2"
             >
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1625505826533-5c80aca7d157?q=80&w=2069&auto=format&fit=crop" alt="Ujjain Temple" className="rounded-3xl w-full h-64 object-cover shadow-lg" />
-                <img src="https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=2067&auto=format&fit=crop" alt="Devotees" className="rounded-3xl w-full h-64 object-cover mt-8 shadow-lg" />
+                <img src="/spritual.jpg" alt="Spiritual Journey" className="rounded-3xl w-full h-64 object-cover shadow-lg" />
+                <img src="/Ujjain/mahakaleshwar.jpg" alt="Mahakal Temple" className="rounded-3xl w-full h-64 object-cover mt-8 shadow-lg" />
               </div>
             </motion.div>
 
